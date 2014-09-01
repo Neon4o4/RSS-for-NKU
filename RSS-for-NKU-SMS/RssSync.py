@@ -10,6 +10,7 @@
 #==========================================================
 import httplib
 import re
+import time
 import xml.etree.ElementTree as ET
 from xml.etree.ElementTree import Element
 
@@ -69,6 +70,8 @@ def getNewItems(urls, titles, latest_url):
 	return newItems
 	
 if __name__ == '__main__':
+	Ver = int(time.time())
+	isnew = False
 	page_set=[
 		'/html/kydt/all/page1',
 		'/html/xwzx/xyxw/page1',
@@ -100,10 +103,14 @@ if __name__ == '__main__':
 		if not check_updated(urls[0], latest[i]):
 			latest_update=do_update(urls, titles, latest[i], xml_set[i])
 			latest[i]=latest_update
+			isnew = True
 	conn.close()
-	
-	file=open('latest','w')
-	file.truncate()
-	for line in latest:
-		file.writelines(line+'\n')
-	file.close()
+	if isnew:
+		file=open('latest','w')
+		file.truncate()
+		for line in latest:
+			file.writelines(line+'\n')
+		file.close()
+		f = open("Version","w")
+		f.write(str(Ver))
+		f.close()
