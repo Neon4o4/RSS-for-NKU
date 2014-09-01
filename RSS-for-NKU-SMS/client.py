@@ -22,6 +22,6 @@ if __name__ == '__main__':
 			VerNow = int(requests.get(url+"Version").content)
 			if VerNow > Ver:
 				update()
-
+				Ver = VerNow
 			else:
 				pass
