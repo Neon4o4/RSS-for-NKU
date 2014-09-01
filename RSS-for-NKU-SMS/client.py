@@ -24,6 +24,6 @@ if __name__ == '__main__':
 			if VerNow > Ver:
 				update()
 				Ver = VerNow
-				print "updated"
+
 			else:
 				pass
