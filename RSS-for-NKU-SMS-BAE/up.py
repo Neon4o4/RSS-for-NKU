@@ -1,18 +1,19 @@
 #encoding=utf8
 #==========================================================
-#getPages():  æ ¹æ®é“¾æ¥è·å–ç½‘é¡µå†…å®¹
-#getURLs():  ä»ç½‘é¡µå†…å®¹ä¸­è·å–æ–°é—»çš„é“¾æ¥
-#getTitles():  ä»ç½‘é¡µå†…å®¹ä¸­è·å–æ–°é—»çš„æ ‡é¢˜
-#check_updated():  æ£€æŸ¥æŸä¸ªæ–°é—»åˆ†ç±»æ˜¯å¦æœ‰æ›´æ–°
-#do_update():  æ›´æ–°æŸä¸ªæ–°é—»åˆ†ç±»çš„XMLæ–‡ä»¶
-#creat_item():  æ ¹æ®æ–°é—»é“¾æ¥å’Œæ ‡é¢˜åˆ›å»ºXMLæ ¼å¼çš„æ–°é—»å†…å®¹èŠ‚ç‚¹
-#getNewItems():  æ ¹æ®æœ‰æ›´æ–°çš„å†…å®¹åˆ›å»ºXMLæ ¼å¼çš„æ–°é—»èŠ‚ç‚¹
+#getPages():  ¸ù¾İÁ´½Ó»ñÈ¡ÍøÒ³ÄÚÈİ
+#getURLs():  ´ÓÍøÒ³ÄÚÈİÖĞ»ñÈ¡ĞÂÎÅµÄÁ´½Ó
+#getTitles():  ´ÓÍøÒ³ÄÚÈİÖĞ»ñÈ¡ĞÂÎÅµÄ±êÌâ
+#check_updated():  ¼ì²éÄ³¸öĞÂÎÅ·ÖÀàÊÇ·ñÓĞ¸üĞÂ
+#do_update():  ¸üĞÂÄ³¸öĞÂÎÅ·ÖÀàµÄXMLÎÄ¼ş
+#creat_item():  ¸ù¾İĞÂÎÅÁ´½ÓºÍ±êÌâ´´½¨XML¸ñÊ½µÄĞÂÎÅÄÚÈİ½Úµã
+#getNewItems():  ¸ù¾İÓĞ¸üĞÂµÄÄÚÈİ´´½¨XML¸ñÊ½µÄĞÂÎÅ½Úµã
 #==========================================================
 import httplib
 import re
 import time
 import xml.etree.ElementTree as ET
 from xml.etree.ElementTree import Element
+
 
 def getURLs(content):
 	result_re=re.compile('<a.+href="(/html/.+html)">')
@@ -35,14 +36,19 @@ def check_updated(url, latest_url):
 	return (url==latest_url)
 
 def do_update(urls, titles, latest_url, xml_file):
-	tree=ET.parse(xml_file)
+	try:
+		tree=ET.parse("/s/test/"+xml_file)
+	except:
+		f = open("/s/test/"+xml_file,"w")
+		f.close()
+		tree=ET.parse("/s/test/"+xml_file)
 	root=tree.getroot()
 	channel=root.find('channel')
 	latest_update=latest_url
 	for new_item in getNewItems(urls,titles,latest_url):
 		channel.insert(3,create_item(new_item[0],unicode(new_item[1],'utf8')))
 		latest_update=new_item[0]
-	tree.write(xml_file)
+	tree.write("/s/test/"+xml_file)
 	return latest_update
 
 def create_item(url, title):
@@ -69,7 +75,7 @@ def getNewItems(urls, titles, latest_url):
 	newItems.reverse()
 	return newItems
 	
-if __name__ == '__main__':
+def up():
 	Ver = int(time.time())
 	isnew = False
 	page_set=[
@@ -79,7 +85,7 @@ if __name__ == '__main__':
 		'/html/yjsjx/all/page1',
 		'/html/xsgz/all/page1',
 		'/html/zsxx/all/page1'
-	]#ç§‘ç ”åŠ¨æ€ï¼Œå­¦é™¢æ–°é—»ï¼Œæœ¬ç§‘ç”Ÿæ•™è‚²ï¼Œç ”ç©¶ç”Ÿæ•™è‚²ï¼Œå­¦ç”Ÿå·¥ä½œï¼Œå…¬å…±æ•°å­¦
+	]#¿ÆÑĞ¶¯Ì¬£¬Ñ§ÔºĞÂÎÅ£¬±¾¿ÆÉú½ÌÓı£¬ÑĞ¾¿Éú½ÌÓı£¬Ñ§Éú¹¤×÷£¬¹«¹²ÊıÑ§
 	xml_set=[
 		'kydt.xml',
 		'xwzx.xml',
@@ -89,11 +95,18 @@ if __name__ == '__main__':
 		'zsxx.xml'
 	]
 
-	file=open('latest','r')
-	latest=file.readlines()
+	file=open('/s/test/latest','r')
+	latest=file.read()
 	file.close()
+	New = []
+	st = ""
 	for i in range(len(latest)):
-		latest[i]=latest[i].strip('\n')
+		if latest[i] != "\n":
+			st += latest[i]
+		else:
+			New.append(st)
+			st = ""
+	latest = New[:]
 	print latest
 	conn=httplib.HTTPConnection('sms.nankai.edu.cn')
 	for i in range(len(page_set)):
@@ -105,12 +118,18 @@ if __name__ == '__main__':
 			latest[i]=latest_update
 			isnew = True
 	conn.close()
+	f = open("/s/test/"+"Now","w")
+	f.write(str(Ver))
+	f.close()
 	if isnew:
-		file=open('latest','w')
-		file.truncate()
+		file=open("/s/test/"+'latest','w')
 		for line in latest:
-			file.writelines(line+'\n')
+			file.write(str(line))
+			file.write("\n")
 		file.close()
-		f = open("Version","w")
+		f = open("/s/test/"+"Version","w")
 		f.write(str(Ver))
 		f.close()
+	return(QAQ.app3)
+if __name__ == "__main__":
+	up()
