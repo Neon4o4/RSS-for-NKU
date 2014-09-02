@@ -13,7 +13,7 @@ import re
 import time
 import xml.etree.ElementTree as ET
 from xml.etree.ElementTree import Element
-
+import mail
 
 def getURLs(content):
 	result_re=re.compile('<a.+href="(/html/.+html)">')
@@ -130,6 +130,6 @@ def up():
 		f = open("/s/test/"+"Version","w")
 		f.write(str(Ver))
 		f.close()
-	return(QAQ.app3)
+	return "UP"
 if __name__ == "__main__":
 	up()
