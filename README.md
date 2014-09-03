@@ -10,9 +10,9 @@ RSS-for-NKU-SMS: 数院RSS
 RSS-for-NKU-ZFXY: 周政RSS
 ~~~
 ### 在BAE运行:
-~~~
-RSS-for-NKU-SMS-BAE: 数院RSS--BAE版本
-~~~
+
+数院RSS--BAE版本：请戳链接 https://github.com/Neon4o4/RSS-for-NKU/tree/BAE
+
 更新：
 -----------
 2014.9.3
