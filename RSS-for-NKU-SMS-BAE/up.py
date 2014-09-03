@@ -1,19 +1,19 @@
 #encoding=utf8
 #==========================================================
-#getPages():  ¸ù¾İÁ´½Ó»ñÈ¡ÍøÒ³ÄÚÈİ
-#getURLs():  ´ÓÍøÒ³ÄÚÈİÖĞ»ñÈ¡ĞÂÎÅµÄÁ´½Ó
-#getTitles():  ´ÓÍøÒ³ÄÚÈİÖĞ»ñÈ¡ĞÂÎÅµÄ±êÌâ
-#check_updated():  ¼ì²éÄ³¸öĞÂÎÅ·ÖÀàÊÇ·ñÓĞ¸üĞÂ
-#do_update():  ¸üĞÂÄ³¸öĞÂÎÅ·ÖÀàµÄXMLÎÄ¼ş
-#creat_item():  ¸ù¾İĞÂÎÅÁ´½ÓºÍ±êÌâ´´½¨XML¸ñÊ½µÄĞÂÎÅÄÚÈİ½Úµã
-#getNewItems():  ¸ù¾İÓĞ¸üĞÂµÄÄÚÈİ´´½¨XML¸ñÊ½µÄĞÂÎÅ½Úµã
+#getPages():  æ ¹æ®é“¾æ¥è·å–ç½‘é¡µå†…å®¹
+#getURLs():  ä»ç½‘é¡µå†…å®¹ä¸­è·å–æ–°é—»çš„é“¾æ¥
+#getTitles():  ä»ç½‘é¡µå†…å®¹ä¸­è·å–æ–°é—»çš„æ ‡é¢˜
+#check_updated():  æ£€æŸ¥æŸä¸ªæ–°é—»åˆ†ç±»æ˜¯å¦æœ‰æ›´æ–°
+#do_update():  æ›´æ–°æŸä¸ªæ–°é—»åˆ†ç±»çš„XMLæ–‡ä»¶
+#creat_item():  æ ¹æ®æ–°é—»é“¾æ¥å’Œæ ‡é¢˜åˆ›å»ºXMLæ ¼å¼çš„æ–°é—»å†…å®¹èŠ‚ç‚¹
+#getNewItems():  æ ¹æ®æœ‰æ›´æ–°çš„å†…å®¹åˆ›å»ºXMLæ ¼å¼çš„æ–°é—»èŠ‚ç‚¹
 #==========================================================
 import httplib
 import re
 import time
 import xml.etree.ElementTree as ET
 from xml.etree.ElementTree import Element
-
+import mail
 
 def getURLs(content):
 	result_re=re.compile('<a.+href="(/html/.+html)">')
@@ -77,6 +77,7 @@ def getNewItems(urls, titles, latest_url):
 	
 def up():
 	Ver = int(time.time())
+	NEWITEM = []
 	isnew = False
 	page_set=[
 		'/html/kydt/all/page1',
@@ -85,7 +86,7 @@ def up():
 		'/html/yjsjx/all/page1',
 		'/html/xsgz/all/page1',
 		'/html/zsxx/all/page1'
-	]#¿ÆÑĞ¶¯Ì¬£¬Ñ§ÔºĞÂÎÅ£¬±¾¿ÆÉú½ÌÓı£¬ÑĞ¾¿Éú½ÌÓı£¬Ñ§Éú¹¤×÷£¬¹«¹²ÊıÑ§
+	]#ç§‘ç ”åŠ¨æ€ï¼Œå­¦é™¢æ–°é—»ï¼Œæœ¬ç§‘ç”Ÿæ•™è‚²ï¼Œç ”ç©¶ç”Ÿæ•™è‚²ï¼Œå­¦ç”Ÿå·¥ä½œï¼Œå…¬å…±æ•°å­¦
 	xml_set=[
 		'kydt.xml',
 		'xwzx.xml',
@@ -116,6 +117,7 @@ def up():
 		if not check_updated(urls[0], latest[i]):
 			latest_update=do_update(urls, titles, latest[i], xml_set[i])
 			latest[i]=latest_update
+			NEWITEM.append((latest_update,titles[0]))
 			isnew = True
 	conn.close()
 	f = open("/s/test/"+"Now","w")
@@ -130,6 +132,6 @@ def up():
 		f = open("/s/test/"+"Version","w")
 		f.write(str(Ver))
 		f.close()
-	return(QAQ.app3)
+	return NEWITEM
 if __name__ == "__main__":
 	up()

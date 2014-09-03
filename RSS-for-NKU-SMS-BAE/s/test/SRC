@@ -1,0 +1,222 @@
+﻿
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>南开大学数学科学学院</title>
+
+
+
+
+
+
+
+<link href="/css1/index.css" rel="stylesheet" type="text/css" />
+<link href="/css1/inc.css" rel="stylesheet" type="text/css" />
+<link href="/css1/xingzheng.css" rel="stylesheet" type="text/css" />
+<link href="/css1/adee.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/script/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="/javascript/jquery.js"></script>
+<script type="text/javascript" src="/script/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/script/jquery.form.js"></script>
+<script type="text/javascript" src="/script/progressbar/jquery.progressbar.min.js"></script>
+<script type="text/javascript" src="/script/javascript_check.js"></script>
+<script type="text/javascript" src="/javascript/main.js"></script>
+<script language="Javascript">
+document.oncontextmenu=new Function("event.returnValue=false");
+document.onselectstart=new Function("event.returnValue=false");
+</script>
+</head>
+
+
+<body oncopy="alert('对不起，禁止复制！');return false;">
+﻿
+
+
+
+
+
+
+
+
+<div id="hearder">
+    <div class="logo">
+        <a href="/"><img src="/images/logo.jpg" style="margin:1px 0 0 20px;" width="376" height="75"  /></a>
+    </div>
+    <div class="sousuo">
+        <div class="daohang">
+            <a href="http://www.nankai.edu.cn" target="_blank">南开大学</a> | <a href="/">学院首页</a> | <a href="http://202.113.29.3/english/1.htm" target="_blank">英文版</a> | <a href="/map.html">网站地图</a>
+        </div>
+        <div class="sousuo1">
+            <form action="/search" method="post" onsubmit="if(this.key.value==''){alert('请输入关键字'); return false;}else{return true;}">
+                <input type="text" name="key"  id="key" class="suru"><input type="image" name="imageField" src="/img/anniu.jpg" class="anniu">
+            </form>
+        </div>
+    </div>
+</div>
+<div id="main_nav">
+    <ul>
+        <li> <a href="/">首页</a> </li>
+        <li> <a href="/d/xygk/xyjj">学院概况</a>
+            <ul>
+                <li><a href="/d/xygk/xyjj">学院简介</a></li>
+                <li><a href="/d/xygk/zyzc">历任领导</a></li>
+                <li><a href="/d/xygk/xyls">学院历史</a></li>
+                <li><a href="/d/xygk/bmzn">职能部门</a></li>
+                <li><a href="/d/xygk/zyxs">专业系所</a></li>
+            </ul>
+        </li>
+        <li> <a href="/teacher/szdw">师资队伍</a>
+            <ul>
+                
+            </ul>
+        </li>
+        <li><a href="/html/xwzx/all">学院工作</a>
+            <ul>
+                <li><a href="/html/xwzx/xyxw">学院新闻</a></li>
+                <li><a href="/html/xwzx/tzgg">通知公告</a></li>
+		<li><a href="/html/xwzx/zpxx">招聘信息</a></li>
+            </ul>
+        </li>
+        <li> <a href="/html/bksjx/all">本科生教育</a>
+            <ul>
+				<li> <a href="/html/bksjx/jwtz">教务通知</a> </li>
+                <li> <a href="/html/bksjx/bkszyjj">本科生招生</a> </li>
+                <li> <a href="/html/bksjx/gdsx">本科生培养</a> </li>
+                <li> <a href="/html/bksjx/zyjhxjh">国家精品课程</a> </li>
+                <li> <a href="/html/bksjx/pxysxw">文件下载</a> </li>
+                <li> <a href="/html/bksjx/sys">有用链接</a> </li>
+            </ul>
+        </li>
+        <li> <a href="/html/yjsjx/all">研究生教育</a>
+            <ul>
+				<li><a href="/html/yjsjx/yjsjwtz">教务通知</a></li>
+                <li> <a href="/html/yjsjx/yjszyjxjh">研究生教学</a> </li>
+                <li> <a href="/html/yjsjx/yjswjxz">文件下载</a> </li>
+            </ul>
+        </li>
+        <li> <a href="/html/kydt/all">科研动态</a>
+            <ul>
+                <li><a href="/html/kydt/kytzgg">通知公告</a></li>
+                <li><a href="/html/kydt/xsjl">学术交流</a></li>
+                <li><a href="/html/kydt/kycg">科研成果</a></li>
+                <li><a href="/html/kydt/wjxz">文件下载</a></li>
+                <li><a href="/html/kydt/xglj">相关链接</a></li>
+            </ul>
+        </li>
+        <li> <a href="/html/zsxx/all">公共数学</a>
+            <ul>
+                <li> <a href="/html/zsxx/bkszs">通知公告</a> </li>
+                <li> <a href="/html/zsxx/yjszs">课程简介</a> </li>
+                <li> <a href="/html/zsxx/ggsxjxdg">教学大纲</a> </li>
+                <li> <a href="/html/zsxx/ggsxcgzs">成果展示</a> </li>
+                <li> <a href="/html/zsxx/ggsxjpkc">精品课程</a> </li>
+                <li> <a href="/html/zsxx/ggsxzyk">资源库</a> </li>
+                <li> <a href="/html/zsxx/ggsxglzd">管理制度</a> </li>
+                <li> <a href="/html/zsxx/ggsxbgxz">表格下载</a> </li>
+                <li> <a href="/html/zsxx/ggsxjxzm">数学之美</a> </li>
+            </ul>
+        </li>
+        <li> <a href="/html/xsgz/all">学生工作</a>
+            <ul>
+                <li><a href="/html/xsgz/xszytz">重要通知</a></li>
+                <li><a href="/html/xsgz/xsdjgz">学生党建</a></li>
+                <li><a href="/html/xsgz/xsllxxx">理论学习</a></li>
+                <li><a href="/html/xsgz/xstxgz">团学工作</a></li>
+                <li><a href="/html/xsgz/xsxshd">学生活动</a></li>
+                <li><a href="/html/xsgz/xsxskw">学生刊物</a></li>
+                <li><a href="/html/xsgz/xsjyxx">就业信息</a></li>
+                <li><a href="/html/xsgz/xsbszn">办事指南</a></li>
+                <!--<li><a href="/html/xsgz/xszxdt">最新动态</a></li> -->
+            </ul>
+        </li>
+        <li> <a href="/html/xyl/xyl">校友工作</a> 
+            <ul>
+                <li><a href="/html/xyl/xyl">校友名录</a></li>
+                <li><a href="/html/xyl/xyxyxw">校友新闻</a></li>
+                <li><a href="/html/xyl/xyhdjy">活动剪影</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div class="clear">
+    </div>
+</div>
+
+<div id="neirong-main">
+  <div class="tCenter mt15">
+    <h2 class="fs14 bolder">Dirac operator for Lie superalgebras</h2>
+  </div>
+  <div class="content pti lh24" style="padding:0 30px;">
+  <div class="tools fc2 tCenter">2014-07-21</div>
+    <div class="tools fc2 tRight"><a href="javascript:window.print()">【打印】</a> <a href="javascript:window.external.AddFavorite(location.href,document.title);">【收藏】</a> <a href="javascript:window.close()">【关闭】</a></div>
+   <P style="TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: 14px/18px 宋体, arial, Verdana, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
+<P style="TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: 14px/18px 宋体, arial, Verdana, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" align=center><FONT style="FONT-SIZE: 56px">学术报告</FONT></P>
+<P style="TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: 14px/18px 宋体, arial, Verdana, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
+<P style="TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: 14px/18px 宋体, arial, Verdana, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><FONT style="FONT-SIZE: 24px">题目: Dirac operator for Lie superalgebras<BR><BR>报告人：Yifang Kang</FONT></P>
+<P style="TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: 14px/18px 宋体, arial, Verdana, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><FONT size=5></FONT>&nbsp;</P>
+<P style="TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: 14px/18px 宋体, arial, Verdana, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><FONT style="FONT-SIZE: 24px">摘要：</FONT><FONT style="FONT-SIZE: 24px">Dirac operator plays important roles in the representation theory of Lie groups.</FONT><FONT style="FONT-SIZE: 24px">In this talk, Dirac operator for Lie superalgebras is introduced.</FONT></P>
+<P style="TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: 14px/18px 宋体, arial, Verdana, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><FONT style="FONT-SIZE: 24px"></FONT>&nbsp;</P>
+<P style="TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: 14px/18px 宋体, arial, Verdana, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><FONT style="FONT-SIZE: 24px">时间：2014年7月22日 下午3:00-4:00</FONT></P>
+<P style="TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: 14px/18px 宋体, arial, Verdana, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><FONT style="FONT-SIZE: 24px"></FONT>&nbsp;</P>
+<P style="TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: 14px/18px 宋体, arial, Verdana, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><FONT style="FONT-SIZE: 24px">地点：第四报告厅</FONT></P>
+<P style="TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: 14px/18px 宋体, arial, Verdana, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><FONT size=5></FONT>&nbsp;</P>
+<P style="TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: 14px/18px 宋体, arial, Verdana, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><FONT size=5>邀请人：陈智奇</FONT></P>
+  </div>
+  <div class="clear"></div>
+</div>
+
+
+
+
+
+
+
+
+<div id="banquan">
+	<div class="banquan-txt">
+    <a href="http://www.nankai.edu.cn/" target="_blank">南开大学</a> | <a href="http://www.nim.nankai.edu.cn/" target="_blank">陈省身数学研究所</a> | <a href="http://www.combinatorics.net.cn/" target="_blank">组合数学研究中心</a>
+    </div>
+</div>
+<div class="banquan-txt1">版权所有 南开大学数学科学学院 | 地址：天津市卫津路94号 | 邮编：300071| 电话：022-23504717 
+    <a title="天津网站制作" href="http://www.adee.cn/" target="_blank">| 网站建设</a>
+    <a title="天津高端网站建设" href="http://www.creatbest.com" target="_blank">天津创思佳网络公司</a></div>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#main_nav').allenMenu();
+	$('#slide').allenSlide();
+});
+//swfobject.registerObject("FlashID");
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
