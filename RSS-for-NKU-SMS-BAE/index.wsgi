@@ -12,6 +12,8 @@ monkey.patch_all()
 
 CheckTime = 1800
 
+
+
 import sae.storage
 def storage(name):
     s = sae.storage.Client()
@@ -35,6 +37,7 @@ def app(environ, start_response):
         status = '200 OK'
         response_headers = [('Content-type', 'text/html')]
         start_response(status, response_headers)
+        mail.Create_HTML_UP(sth_new)
         return["<html><head><meta http-equiv=\"refresh\" content=\"2\s\"></head><body><pre>Updating...........please wait for several seconds later\n\t\t\t\t\t-----CodingCat</pre></body></html>"]
     else:
         

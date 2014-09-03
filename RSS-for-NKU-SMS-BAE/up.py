@@ -1,12 +1,12 @@
 #encoding=utf8
 #==========================================================
-#getPages():  ¸ù¾ÝÁ´½Ó»ñÈ¡ÍøÒ³ÄÚÈÝ
-#getURLs():  ´ÓÍøÒ³ÄÚÈÝÖÐ»ñÈ¡ÐÂÎÅµÄÁ´½Ó
-#getTitles():  ´ÓÍøÒ³ÄÚÈÝÖÐ»ñÈ¡ÐÂÎÅµÄ±êÌâ
-#check_updated():  ¼ì²éÄ³¸öÐÂÎÅ·ÖÀàÊÇ·ñÓÐ¸üÐÂ
-#do_update():  ¸üÐÂÄ³¸öÐÂÎÅ·ÖÀàµÄXMLÎÄ¼þ
-#creat_item():  ¸ù¾ÝÐÂÎÅÁ´½ÓºÍ±êÌâ´´½¨XML¸ñÊ½µÄÐÂÎÅÄÚÈÝ½Úµã
-#getNewItems():  ¸ù¾ÝÓÐ¸üÐÂµÄÄÚÈÝ´´½¨XML¸ñÊ½µÄÐÂÎÅ½Úµã
+#getPages():  æ ¹æ®é“¾æŽ¥èŽ·å–ç½‘é¡µå†…å®¹
+#getURLs():  ä»Žç½‘é¡µå†…å®¹ä¸­èŽ·å–æ–°é—»çš„é“¾æŽ¥
+#getTitles():  ä»Žç½‘é¡µå†…å®¹ä¸­èŽ·å–æ–°é—»çš„æ ‡é¢˜
+#check_updated():  æ£€æŸ¥æŸä¸ªæ–°é—»åˆ†ç±»æ˜¯å¦æœ‰æ›´æ–°
+#do_update():  æ›´æ–°æŸä¸ªæ–°é—»åˆ†ç±»çš„XMLæ–‡ä»¶
+#creat_item():  æ ¹æ®æ–°é—»é“¾æŽ¥å’Œæ ‡é¢˜åˆ›å»ºXMLæ ¼å¼çš„æ–°é—»å†…å®¹èŠ‚ç‚¹
+#getNewItems():  æ ¹æ®æœ‰æ›´æ–°çš„å†…å®¹åˆ›å»ºXMLæ ¼å¼çš„æ–°é—»èŠ‚ç‚¹
 #==========================================================
 import httplib
 import re
@@ -86,7 +86,7 @@ def up():
 		'/html/yjsjx/all/page1',
 		'/html/xsgz/all/page1',
 		'/html/zsxx/all/page1'
-	]#¿ÆÑÐ¶¯Ì¬£¬Ñ§ÔºÐÂÎÅ£¬±¾¿ÆÉú½ÌÓý£¬ÑÐ¾¿Éú½ÌÓý£¬Ñ§Éú¹¤×÷£¬¹«¹²ÊýÑ§
+	]#ç§‘ç ”åŠ¨æ€ï¼Œå­¦é™¢æ–°é—»ï¼Œæœ¬ç§‘ç”Ÿæ•™è‚²ï¼Œç ”ç©¶ç”Ÿæ•™è‚²ï¼Œå­¦ç”Ÿå·¥ä½œï¼Œå…¬å…±æ•°å­¦
 	xml_set=[
 		'kydt.xml',
 		'xwzx.xml',
