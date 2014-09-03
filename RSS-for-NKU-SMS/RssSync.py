@@ -13,7 +13,6 @@ import re
 import time
 import xml.etree.ElementTree as ET
 from xml.etree.ElementTree import Element
-
 def getURLs(content):
 	result_re=re.compile('<a.+href="(/html/.+html)">')
 	result=result_re.findall(content)
@@ -65,12 +64,12 @@ def getNewItems(urls, titles, latest_url):
 			break
 		else:
 			newItems.append((urls[i],titles[i]))
-	print newItems[0][1]
 	newItems.reverse()
 	return newItems
 	
 if __name__ == '__main__':
 	Ver = int(time.time())
+	NEWITEM = []
 	isnew = False
 	page_set=[
 		'/html/kydt/all/page1',
@@ -94,15 +93,16 @@ if __name__ == '__main__':
 	file.close()
 	for i in range(len(latest)):
 		latest[i]=latest[i].strip('\n')
-	print latest
 	conn=httplib.HTTPConnection('sms.nankai.edu.cn')
 	for i in range(len(page_set)):
 		page=getPages(conn, page_set[i])
 		urls=getURLs(page)
 		titles=getTitles(page)
 		if not check_updated(urls[0], latest[i]):
+			
 			latest_update=do_update(urls, titles, latest[i], xml_set[i])
 			latest[i]=latest_update
+			NEWITEM.append((latest_update,titles[0]))
 			isnew = True
 	conn.close()
 	if isnew:
@@ -114,3 +114,4 @@ if __name__ == '__main__':
 		f = open("Version","w")
 		f.write(str(Ver))
 		f.close()
+		print NEWITEM
