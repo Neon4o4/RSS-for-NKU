@@ -77,6 +77,7 @@ def getNewItems(urls, titles, latest_url):
 	
 def up():
 	Ver = int(time.time())
+	NEWITEM = []
 	isnew = False
 	page_set=[
 		'/html/kydt/all/page1',
@@ -116,6 +117,7 @@ def up():
 		if not check_updated(urls[0], latest[i]):
 			latest_update=do_update(urls, titles, latest[i], xml_set[i])
 			latest[i]=latest_update
+			NEWITEM.append((latest_update,titles[0]))
 			isnew = True
 	conn.close()
 	f = open("/s/test/"+"Now","w")
@@ -130,6 +132,6 @@ def up():
 		f = open("/s/test/"+"Version","w")
 		f.write(str(Ver))
 		f.close()
-	return "UP"
+	return NEWITEM
 if __name__ == "__main__":
 	up()
