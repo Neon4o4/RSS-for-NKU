@@ -11,7 +11,11 @@ RSS-for-NKU-ZFXY: 周政RSS
 ~~~
 ### 在BAE运行:
 
-数院RSS--BAE版本：请戳链接 https://github.com/Neon4o4/RSS-for-NKU/tree/BAE
+数院RSS--BAE版本：
+
+请戳链接 https://github.com/Neon4o4/RSS-for-NKU/tree/BAE
+
+BAE版作者：CodingCat https://github.com/NKUCodingCat
 
 更新：
 -----------
