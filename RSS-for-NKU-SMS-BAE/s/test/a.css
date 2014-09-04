@@ -1,5 +1,5 @@
-rss{padding:30px;}
-item{padding : 10px;}
+rss{padding:2%}
+item{padding : 2%;}
 title
 {
 display:block;
@@ -31,3 +31,7 @@ text-indent:5em;
 font-size: 14px;
 color: #666;
 }
+body{font-family:Arial;margin-left:10%;margin-right:10%;margin-top:5%;font-size:16px;}
+p{text-indent:4em;margin-top:0.2em;margin-bottom:0px;font-family:monospace;}
+pre{text-indent:4em;margin-top:0.2em;margin-bottom:0px;}
+a{font-family: Arial;}

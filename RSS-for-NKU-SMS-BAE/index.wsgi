@@ -42,7 +42,7 @@ def app(environ, start_response):
         return["<html><head><meta http-equiv=\"refresh\" content=\"2\"></head><body><pre>Updating...........please wait several seconds\n\t\t\t\t\t-----CodingCat</pre></body></html>"]
     else:
         
-        N = "<html><head></head><body><h3>\n	This is the News from NKU, developed by CodingCat/Neon4o4\n</h3>\n<p>"+T+"\t<br>\n</p>\n<pre>The news version(marked by timestamp) is :\t"+time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(int(T)))+"\nThe whole world are  at  : \t\t\t"+time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))+"\nAnd the next check will be at : \t\t"+time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(int(Ver)+CheckTime))+"\n</pre>\n<p>\n	<br>\n</p>\n<h4>\n	SMS-News lists:\n</h4>\n"
+        N = "<html><head><link href=\"http://nkursstest-test.stor.sinaapp.com/a.css\" rel=\"stylesheet\" type=\"text/css\" /></head><body><h3>\n	This is the News from NKU, developed by CodingCat/Neon4o4\n</h3><pre>The news version(marked by timestamp) is :\t"+time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(int(T)))+"</pre><pre>The whole world are  at  : \t\t\t"+time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))+"</pre><pre>And the next check will be at : \t\t"+time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(int(Ver)+CheckTime))+"\n</pre>\n<p>\n	<br>\n</p>\n<h4>\n	SMS-News lists:\n</h4>\n"
         M = os.listdir("/s/test/")
   
     
@@ -51,7 +51,7 @@ def app(environ, start_response):
             if a.findall(i):
                 N+="\n"          
                 N += "<pre>"+i+"\t<a href=\""+storage(i)+"\">"+storage(i)+"</a>&nbsp;</pre>\n"
-        N += "<p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p style=\"text-align:center;\">Mail Alert Service is avaliable. If you want to recevice the mail please <a href=\"Mailto:nankai.codingcat@outlook.com\">tell me</a></p><p style=\"text-align:center;\">Blog of us : <a href=\"https://github.com/NKUCodingCat\" target=\"_blank\">CodingCat</a>/<a href=\"https://github.com/Neon4o4\" target=\"_blank\">Neon4o4</a>\n</p>\n<p style=\"text-align:center;\">\nProject Home:<a href=\"https://github.com/NKUCodingCat/RSS-for-NKU/tree/master/RSS-for-NKU-SMS-BAE\" target=\"_blank\">Here</a><span id=\"__kindeditor_bookmark_end_216__\"></span>\n</p>"
+        N += "<p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p style=\"text-align:center;\">Mail Alert Service is avaliable. If you want to recevice the mail please <a href=\"Mailto:nankai.codingcat@outlook.com\">tell me</a></p><p style=\"text-align:center;\">Blog of us : <a href=\"https://github.com/NKUCodingCat\" target=\"_blank\">CodingCat</a>/<a href=\"https://github.com/Neon4o4\" target=\"_blank\">Neon4o4</a>\n</p>\n<p style=\"text-align:center;\">\nProject Home:<a href=\"https://github.com/NKUCodingCat/RSS-for-NKU/tree/master/RSS-for-NKU-SMS-BAE\" target=\"_blank\">Here</a><span id=\"__kindeditor_bookmark_end_216__\"></span>\n</p><p>TimeStamp for Further Dev :"+T+"</p>"
         N += "</body>\n</html>\n"
     
         status = '200 OK'
