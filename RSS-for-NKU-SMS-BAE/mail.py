@@ -44,7 +44,7 @@ def send_mail(Title,Text):
 	m.to = ToList
 	m.subject = Title
 	m.html = Text
-	m.smtp = ('smtp.qq.com', 25, '2034393074@qq.com', '13326518308', False)
+	m.smtp = ('smtp.yeah.net',25, 'nkusmsrss@yeah.net', 'pWS', False)
 	m.send()
     
     

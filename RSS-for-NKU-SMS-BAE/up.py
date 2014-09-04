@@ -10,10 +10,15 @@
 #==========================================================
 import httplib
 import re
+import Date
 import time
 import xml.etree.ElementTree as ET
 from xml.etree.ElementTree import Element
 import mail
+
+def getTime(content):
+	Time=re.findall('\d\d\d\d\.\d\d\.\d\d',content)
+	return Time
 
 def getURLs(content):
 	result_re=re.compile('<a.+href="(/html/.+html)">')
@@ -35,7 +40,7 @@ def getTitles(content):
 def check_updated(url, latest_url):
 	return (url==latest_url)
 
-def do_update(urls, titles, latest_url, xml_file):
+def do_update(Time , urls, titles, latest_url, xml_file):
 	try:
 		tree=ET.parse("/s/test/"+xml_file)
 	except:
@@ -45,33 +50,35 @@ def do_update(urls, titles, latest_url, xml_file):
 	root=tree.getroot()
 	channel=root.find('channel')
 	latest_update=latest_url
-	for new_item in getNewItems(urls,titles,latest_url):
-		channel.insert(3,create_item(new_item[0],unicode(new_item[1],'utf8')))
+	for new_item in getNewItems(Time ,urls,titles,latest_url):
+		channel.insert(3,create_item(new_item[0],unicode(new_item[1],'utf8'),Date.DateTran(new_item[2])))
 		latest_update=new_item[0]
 	tree.write("/s/test/"+xml_file)
 	return latest_update
 
-def create_item(url, title):
+def create_item(url, title ,Time):
 	element_item = Element('item')
 	element_title = Element('title')
 	element_link = Element('link')
-	element_description=Element('description')
+	element_time = Element('time')
+	element_des = Element('description')
 	element_title.text=title
-	element_link.text=url
-	element_description.text=title
-	element_item.insert(0,element_description)
+	element_link.text="http://sms.nankai.edu.cn"+url
+	element_time.text = Time
+	element_des.text = title
+	element_item.insert(0,element_des)
 	element_item.insert(0,element_link)
+	element_item.insert(0,element_time)
 	element_item.insert(0,element_title)
 	return element_item
 
-def getNewItems(urls, titles, latest_url):
+def getNewItems(Time , urls, titles, latest_url):
 	newItems=[]
 	for i in range(len(urls)):
 		if urls[i] == latest_url:
 			break
 		else:
-			newItems.append((urls[i],titles[i]))
-	print newItems[0][1]
+			newItems.append((urls[i],titles[i],Time[i]))
 	newItems.reverse()
 	return newItems
 	
@@ -114,8 +121,9 @@ def up():
 		page=getPages(conn, page_set[i])
 		urls=getURLs(page)
 		titles=getTitles(page)
+		Time = getTime(page)
 		if not check_updated(urls[0], latest[i]):
-			latest_update=do_update(urls, titles, latest[i], xml_set[i])
+			latest_update=do_update(Time , urls, titles, latest[i], xml_set[i])
 			latest[i]=latest_update
 			NEWITEM.append((latest_update,titles[0]))
 			isnew = True

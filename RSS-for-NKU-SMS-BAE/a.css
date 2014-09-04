@@ -1,2 +1,33 @@
-title{color: #0B0F4C;}
-time{font-size: .96em;color: #666;font-style: italic;}
+rss{padding:30px;}
+item{padding : 10px;}
+title
+{
+display:block;
+font-size: 18px;
+color: #000000;
+font-weight:bold;
+}
+time
+{
+font:italic arial,sans-serif;
+display:block;
+font-size: 16px;
+color: #666;
+font-style: italic;
+text-indent:2em;
+}
+link
+{
+font:italic arial,sans-serif;
+display:block;
+text-indent:5em;
+font-size: 14px;
+color: #666;
+}
+description
+{
+display:block;
+text-indent:5em;
+font-size: 14px;
+color: #666;
+}
