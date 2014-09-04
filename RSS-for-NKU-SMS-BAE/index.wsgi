@@ -51,7 +51,7 @@ def app(environ, start_response):
             if a.findall(i):
                 N+="\n"          
                 N += "<pre>"+i+"\t<a href=\""+storage(i)+"\">"+storage(i)+"</a>&nbsp;</pre>\n"
-        N += "<p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p style=\"text-align:center;\">Mail Alert Service is avaliable. If you want to recevice the mail please <a href=\"Mailto:nankai.codingcat@outlook.com\">tell me</a></p><p style=\"text-align:center;\">Blog of us : <a href=\"https://github.com/NKUCodingCat\" target=\"_blank\">CodingCat</a>/<a href=\"https://github.com/Neon4o4\" target=\"_blank\">Neon4o4</a>\n</p>\n<p style=\"text-align:center;\">\nProject Home:<a href=\"https://github.com/NKUCodingCat/RSS-for-NKU/tree/master/RSS-for-NKU-SMS-BAE\" target=\"_blank\">Here</a><span id=\"__kindeditor_bookmark_end_216__\"></span>\n</p><p>TimeStamp for Further Dev :"+T+"</p>"
+        N += "<p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p style=\"text-align:center;text-indent:0em;\">Mail Alert Service is avaliable. If you want to recevice the mail please <a href=\"Mailto:nankai.codingcat@outlook.com\">tell me</a></p><p style=\"text-align:center;text-indent:0em;\">Blog of us : <a href=\"https://github.com/NKUCodingCat\" target=\"_blank\">CodingCat</a>/<a href=\"https://github.com/Neon4o4\" target=\"_blank\">Neon4o4</a>\n</p>\n<p style=\"text-align:center;text-indent:0em;\">\nProject Home:<a href=\"https://github.com/NKUCodingCat/RSS-for-NKU/tree/master/RSS-for-NKU-SMS-BAE\" target=\"_blank\">Here</a><span id=\"__kindeditor_bookmark_end_216__\"></span>\n</p><p>TimeStamp for Further Dev :"+T+"</p>"
         N += "</body>\n</html>\n"
     
         status = '200 OK'
