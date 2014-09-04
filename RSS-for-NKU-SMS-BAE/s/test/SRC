@@ -168,23 +168,12 @@ document.onselectstart=new Function("event.returnValue=false");
 
 <div id="neirong-main">
   <div class="tCenter mt15">
-    <h2 class="fs14 bolder">Dirac operator for Lie superalgebras</h2>
+    <h2 class="fs14 bolder">关于我校高等数学公共必修课改革的通知</h2>
   </div>
   <div class="content pti lh24" style="padding:0 30px;">
-  <div class="tools fc2 tCenter">2014-07-21</div>
+  <div class="tools fc2 tCenter">2014-06-30</div>
     <div class="tools fc2 tRight"><a href="javascript:window.print()">【打印】</a> <a href="javascript:window.external.AddFavorite(location.href,document.title);">【收藏】</a> <a href="javascript:window.close()">【关闭】</a></div>
-   <P style="TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: 14px/18px 宋体, arial, Verdana, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
-<P style="TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: 14px/18px 宋体, arial, Verdana, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" align=center><FONT style="FONT-SIZE: 56px">学术报告</FONT></P>
-<P style="TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: 14px/18px 宋体, arial, Verdana, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
-<P style="TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: 14px/18px 宋体, arial, Verdana, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><FONT style="FONT-SIZE: 24px">题目: Dirac operator for Lie superalgebras<BR><BR>报告人：Yifang Kang</FONT></P>
-<P style="TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: 14px/18px 宋体, arial, Verdana, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><FONT size=5></FONT>&nbsp;</P>
-<P style="TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: 14px/18px 宋体, arial, Verdana, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><FONT style="FONT-SIZE: 24px">摘要：</FONT><FONT style="FONT-SIZE: 24px">Dirac operator plays important roles in the representation theory of Lie groups.</FONT><FONT style="FONT-SIZE: 24px">In this talk, Dirac operator for Lie superalgebras is introduced.</FONT></P>
-<P style="TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: 14px/18px 宋体, arial, Verdana, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><FONT style="FONT-SIZE: 24px"></FONT>&nbsp;</P>
-<P style="TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: 14px/18px 宋体, arial, Verdana, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><FONT style="FONT-SIZE: 24px">时间：2014年7月22日 下午3:00-4:00</FONT></P>
-<P style="TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: 14px/18px 宋体, arial, Verdana, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><FONT style="FONT-SIZE: 24px"></FONT>&nbsp;</P>
-<P style="TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: 14px/18px 宋体, arial, Verdana, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><FONT style="FONT-SIZE: 24px">地点：第四报告厅</FONT></P>
-<P style="TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: 14px/18px 宋体, arial, Verdana, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><FONT size=5></FONT>&nbsp;</P>
-<P style="TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: 14px/18px 宋体, arial, Verdana, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><FONT size=5>邀请人：陈智奇</FONT></P>
+   <A href="http://222.30.32.3/NewsHTML/20140612142642.html" target=_blank>关于我校高等数学公共必修课改革的通知</A>
   </div>
   <div class="clear"></div>
 </div>

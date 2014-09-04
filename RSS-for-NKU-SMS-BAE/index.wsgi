@@ -3,6 +3,7 @@ import sae
 import up
 import time
 import re
+import datetime
 a  = re.compile("\.xml")
 import os
 import mail
@@ -22,6 +23,7 @@ def storage(name):
     return url
 def app(environ, start_response):
     f = open ("/s/test/Version","r")
+    T = f.read()
     try:
     	g = open ("/s/test/Now","r")
     except:
@@ -40,7 +42,7 @@ def app(environ, start_response):
         return["<html><head><meta http-equiv=\"refresh\" content=\"2\"></head><body><pre>Updating...........please wait several seconds\n\t\t\t\t\t-----CodingCat</pre></body></html>"]
     else:
         
-        N = "<html><head></head><body><h3>\n	This is the News from NKU, developed by CodingCat/Neon4o4\n</h3>\n<p>\n\t<br>\n</p>\n<pre>The news version(marked by timestamp) is :\t"+f.read()+"\nThe whole world are  at  : \t\t\t"+str(int(time.time()))+"\nAnd the next check will be at : \t\t"+str(int(Ver)+CheckTime)+"\n</pre>\n<p>\n	<br>\n</p>\n<h4>\n	SMS-News lists:\n</h4>\n"
+        N = "<html><head></head><body><h3>\n	This is the News from NKU, developed by CodingCat/Neon4o4\n</h3>\n<p>"+T+"\t<br>\n</p>\n<pre>The news version(marked by timestamp) is :\t"+time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(int(T)))+"\nThe whole world are  at  : \t\t\t"+time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))+"\nAnd the next check will be at : \t\t"+time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(int(Ver)+CheckTime))+"\n</pre>\n<p>\n	<br>\n</p>\n<h4>\n	SMS-News lists:\n</h4>\n"
         M = os.listdir("/s/test/")
   
     
