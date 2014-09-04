@@ -1,8 +1,0 @@
-name: nkursstest
-version: 1
-cron:
-- description: test
-  url: /
-  timezone: Beijing
-  schedule: "*/15 * * * *"
-
