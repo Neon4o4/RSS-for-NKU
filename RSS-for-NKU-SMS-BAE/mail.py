@@ -3,7 +3,20 @@ import re
 import Catch
 from sgmllib import SGMLParser
 from sae.mail import EmailMessage
-ToList = ["446709220@qq.com"]
+
+
+import sae.kvdb
+kv = sae.kvdb.KVClient()
+
+def GetAva ():
+    return kv.get("Ava")
+
+def MailList():
+    List = GetAva()
+    L = []
+    for i in List:
+        L.append(re.sub("%40","@",i))
+    return L
 
 HTML = "<html><head></head><body><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"><h2 style=\"text-align:center;\">"
 #--------Title--------------
@@ -41,10 +54,10 @@ def Create_Text(title,link):
 
 def send_mail(Title,Text):
 	m = EmailMessage()
-	m.to = ToList
+	m.to = MailList()
 	m.subject = Title
 	m.html = Text
-	m.smtp = ('smtp.yeah.net',25, 'nkusmsrss@yeah.net', 'pWS', False)
+	m.smtp = ('smtp.yeah.net',25, 'nkusmsrss@yeah.net', 'PSW', False)
 	m.send()
     
     
