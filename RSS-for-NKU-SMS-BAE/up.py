@@ -16,6 +16,23 @@ import xml.etree.ElementTree as ET
 from xml.etree.ElementTree import Element
 import mail
 
+
+
+def sub(NAME):
+	f = open(NAME,"r")
+	Con = f.read()
+	f.close()
+	if Con [0:19] == "<rss version=\"2.0\">":
+		f = open(NAME,"w")
+		Con = "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>\n<?xml-stylesheet type=\"text/css\" href=\"a.css\"?>\n" +Con
+		f.write(Con)
+		f.close()
+
+
+
+
+
+
 def getTime(content):
 	Time=re.findall('\d\d\d\d\.\d\d\.\d\d',content)
 	return Time
@@ -54,6 +71,7 @@ def do_update(Time , urls, titles, latest_url, xml_file):
 		channel.insert(3,create_item(new_item[0],unicode(new_item[1],'utf8'),Date.DateTran(new_item[2])))
 		latest_update=new_item[0]
 	tree.write("/s/test/"+xml_file)
+	sub("/s/test/"+xml_file)
 	return latest_update
 
 def create_item(url, title ,Time):
