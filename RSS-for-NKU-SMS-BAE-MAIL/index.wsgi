@@ -1,6 +1,8 @@
 #-*- coding=utf-8 -*-
 
+import NUM
 
+import time
 
 GETDATA = """<html><head><title>E-mail Validate</title></head>
 <body>
@@ -46,6 +48,8 @@ def app(environ, start_response):
     method=environ['REQUEST_METHOD']
 
     if method=="GET":
+        
+        #kvpo.test()
 
         return GETDATA
 
@@ -92,9 +96,11 @@ def app(environ, start_response):
                 return "Validate Failed, TimeOut or Validate Code Error or No such Email Address Record"
         #==========================================
         if Dict["In"] == "Subscribe":
-            return "DEVing"
+            Info = kvpo.Temp_in(Dict["Email"],NUM.Code(),time.time(),"in")
+            return Info
         if Dict["In"] == "Unsubscribe":
-            return "DEVing"
+            Info = kvpo.Temp_in(Dict["Email"],NUM.Code(),time.time(),"out")
+            return Info
         
 application = sae.create_wsgi_app(app)
 
