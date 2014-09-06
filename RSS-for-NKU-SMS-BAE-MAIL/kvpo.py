@@ -71,6 +71,9 @@ def Temp_in(Email, Code, Time, Todo):
             TmpClr()
             return "Mail Sent"
     except:
+        if Todo == "out":
+            if not Email in GetAva():
+                return "You haven't subscribe Mail"
         send_mail(re.sub("%40","@",Email),"ValidateMail","Please go to http://2.nkursstest.sinaapp.com/ and input the Validate Code :"+str(Code)+" and your Email Address,Click validate,the Code can be used in 24 H ")
         Dict[Email] = D
         PutTmp(Dict)
@@ -111,7 +114,7 @@ def CheckMail(Email,Code):
                     LL.append(Email)
             PutAva(LL)
             del Dict[Email]
-            PutTmp[Dict]
+            PutTmp(Dict)
         AvaClr()
         return True
     
